@@ -1,4 +1,4 @@
-%macro utl_renamel ( old= , new= ) ;
+%macro utl_renamel ( old , new ) ;
     /* Take two cordinated lists &old and &new and  */
     /* return another list of corresponding pairs   */
     /* separated by equal sign for use in a rename  */
