@@ -84,8 +84,8 @@ Rename tables using coordinated lists of variable names.
         data newNames;
 
           set oldNames (rename=(
-             %utl_renamel(old = nam gender yrs hgt wgt ,
-                         new = name sex age height weight) ) );
+             %utl_renamel(nam gender yrs hgt wgt ,
+                         name sex age height weight) ) );
         run;quit;
 
 
@@ -145,7 +145,7 @@ Rename tables using coordinated lists of variable names.
     /* From: Ian Whitlock <whitloi1@WESTATPO.WESTAT.COM> */
 
 
-    %macro utl_renamel ( old= , new= ) ;
+    %macro utl_renamel ( old , new ) ;
         /* Take two cordinated lists &old and &new and  */
         /* return another list of corresponding pairs   */
         /* separated by equal sign for use in a rename  */
