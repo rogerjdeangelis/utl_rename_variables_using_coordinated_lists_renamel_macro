@@ -82,8 +82,8 @@ PROCESS
     data newNames;
 
       set oldNames (rename=(
-         %utl_renamel(old = nam gender yrs hgt wgt ,
-                     new = name sex age height weight) ) );
+         %utl_renamel(nam gender yrs hgt wgt ,
+                     name sex age height weight) ) );
     run;quit;
 
 
